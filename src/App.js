@@ -11,13 +11,13 @@ function App() {
   return (
     <div className="flex">
       <div>
-        <Sidebar /> //Leftmost Part
+        <Sidebar /> {/* //Leftmost Part */}
       </div>
-      <div className="flex flex-col gap-y-3 p-3 items-center justify-start"> {/* Middlemost Part */}
+      <div className="flex flex-col gap-y-3 p-3 items-center justify-start w-full"> {/* Middlemost Part */}
         <div> {/* //Navbars */}
 
         </div>
-        <div className="flex flex-col gap-y-3 p-3 items-center justify-start">
+        <div className="flex flex-col gap-y-3 p-3 items-center justify-start w-3/4">
           {cardElements} {/* //Cards */}
         </div>
       </div>
