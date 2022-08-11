@@ -17,7 +17,7 @@ function App() {
         <div> {/* //Navbars */}
 
         </div>
-        <div className="flex flex-col gap-y-3 p-3 items-center justify-start w-3/4">
+        <div className="flex flex-col gap-y-6 p-3 items-center justify-start w-3/4">
           {cardElements} {/* //Cards */}
         </div>
       </div>
