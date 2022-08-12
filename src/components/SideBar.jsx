@@ -14,7 +14,7 @@ const iconArray = SidebarData.map(x => {
     )
 })        
 return (    
-    <aside className="w-fit drop-shadow-lg border-r-2 border-r-gray-200" aria-label="Sidebar">
+    <aside className="w-fit drop-shadow-lg border-r-2 border-r-gray-200 fixed" aria-label="Sidebar">
     <div className="overflow-y-auto flex flex-col justify-between py-10 px-6 h-screen bg-gray-150 rounded dark:bg-gray-800">
         <div>
         <ul className="space-y-10 flex flex-col h-3/4 justify-between items-center">
