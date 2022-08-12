@@ -7,7 +7,7 @@ const ReqProj = () =>{
         <div className="bg-gray-150 py-4 px-6 flex flex-col gap-y-3 rounded-md">
           <div className="grid grid-cols-4 gap-4">
           <div className="flex gap-x-3 items-center">
-                <img src={require("../Profiles/Ayush.png")} />
+                <img className="profilePicImg" src={require("../Profiles/Ayush.png")} />
                 <h1>{item.profileName}</h1>
                 </div>
             <h1 className="flex items-center gap-x-2">

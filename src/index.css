@@ -9,3 +9,8 @@
 hr{
     height: 20px;
 }
+
+.profilePicImg{
+    /* height: 2.5rem; */
+    width: 3.5rem;
+}

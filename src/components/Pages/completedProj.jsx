@@ -10,7 +10,7 @@ const CompletedProj = () => {
         <div className="bg-gray-150 my-4 py-4 px-6 flex flex-col gap-y-3 rounded-md">
           <div className="grid grid-cols-4 gap-4 pr-5">
           <div className="flex gap-x-3 items-center">
-                <img src={require("../Profiles/Ayush.png")} />
+                <img className="profilePicImg" src={require("../Profiles/Ayush.png")} />
                 <h1>{item.profileName}</h1>
                 </div>
             <h1 className="flex items-center gap-x-2">
@@ -21,7 +21,7 @@ const CompletedProj = () => {
               <img src={require(".././Icons/email.png")} alt="" />
               {item.email}
             </h1>
-            <div className="px-4 py-2 bg-green-300 rounded-md justify-self-end">
+            <div className="px-4 flex items-center h-3/4 py-2 bg-green-300 rounded-md justify-self-end self-center">
               <h1 className="text-green-800 text-center">Completed</h1>
             </div>
           </div>
