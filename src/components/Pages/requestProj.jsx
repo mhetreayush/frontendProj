@@ -4,10 +4,12 @@ const ReqProj = () =>{
   function Card({ item }) {
     return (
       <div className="flex flex-col gap-y-5 w-full">
-        <div className="bg-gray-200 py-4 px-6 flex flex-col gap-y-3 rounded-lg">
+        <div className="bg-gray-150 py-4 px-6 flex flex-col gap-y-3 rounded-md">
           <div className="grid grid-cols-4 gap-4">
-            {/* <img src={require(`./Profiles/${item.profileName}.png`)} /> */}
-            <h1>{item.profileName}</h1>
+          <div className="flex gap-x-3 items-center">
+                <img src={require("../Profiles/Ayush.png")} />
+                <h1>{item.profileName}</h1>
+                </div>
             <h1 className="flex items-center gap-x-2">
               <img src={require(".././Icons/phone.png")} alt="" />
               {item.phone}
@@ -26,7 +28,7 @@ const ReqProj = () =>{
           </div>
           <div>
             <h1 className="font-bold">Description</h1>
-            <h3 className="pr-16">{item.description}</h3>
+            <h3 className="pr-16 font-extralight">{item.description}</h3>
           </div>
   
           <div className="flex w-full justify-between items-center pr-5">

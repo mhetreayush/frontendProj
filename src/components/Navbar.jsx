@@ -1,17 +1,20 @@
+import { Link } from 'react-router-dom';
 import SearchBar from "./SearchBar";
-const Options =["Request", "Completed", "Ongoing", "Upcoming"]
-const OptionArray = Options.map(x=>{
-    return(
-<a href="#" id={x} className="w-3/4">
-                    <h1 className="col-span-1 text-lg">{x}</h1>
-                </a>
-    )
-})
+
 const NavBar = () =>{
+    const options = ["Completed", "Ongoing" ,"Upcoming"]
+    const optionArray = options.map(x=>{
+    const path = `/${x}`
+        return(
+            <Link to={path} id={x} className="w-3/4 hover:text-blue-600 focus:text-blue-600 focus:overline">
+                    <h1 className="col-span-1 text-lg">{x}</h1>
+                </Link>
+        )
+    })
     return(
     <div>
         <div className="flex flex-col gap-y-3 w-full">
-            <div className="flex justify-between w-full">
+            <div className="flex flex-col md:flex-row gap-y-3 md:justify-between w-full">
                 <div className="flex gap-x-2 items-center font-extrabold text-2xl">
                     <a href="#">
                         <img src={require("./Icons/backArrow.png")}/>
@@ -23,8 +26,11 @@ const NavBar = () =>{
                 </div>
             </div>
 
-            <div className="border-b-2 grid grid-cols-4 text-center pt-8 pb-2 items-center">
-                {OptionArray}
+            <div className="border-b-2 grid grid-cols-4 text-center pt-8 pb-2 items-center ">
+                <Link to="/"  id="request" className="w-3/4 hover:text-blue-600 focus:text-blue-600 focus:overline">
+                    <h1 className="col-span-1 text-lg">Request</h1>
+                </Link>
+                {optionArray}
             </div>
         </div>
     </div>

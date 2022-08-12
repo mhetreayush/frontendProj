@@ -7,10 +7,12 @@ const CompletedProj = () => {
   function Card({ item }) {
     return (
       <div className="flex flex-col gap-y-5 w-full">
-        <div className="bg-gray-200 py-4 px-6 flex flex-col gap-y-3 rounded-lg">
+        <div className="bg-gray-150 my-4 py-4 px-6 flex flex-col gap-y-3 rounded-md">
           <div className="grid grid-cols-4 gap-4 pr-5">
-            {/* <img src={require(`./Profiles/${item.profileName}.png`)} /> */}
-            <h1>{item.profileName}</h1>
+          <div className="flex gap-x-3 items-center">
+                <img src={require("../Profiles/Ayush.png")} />
+                <h1>{item.profileName}</h1>
+                </div>
             <h1 className="flex items-center gap-x-2">
               <img src={require(".././Icons/phone.png")} alt="" />
               {item.phone}
@@ -19,16 +21,16 @@ const CompletedProj = () => {
               <img src={require(".././Icons/email.png")} alt="" />
               {item.email}
             </h1>
-            <div className="px-4 py-2 bg-green-300 rounded-lg justify-self-end">
+            <div className="px-4 py-2 bg-green-300 rounded-md justify-self-end">
               <h1 className="text-green-800 text-center">Completed</h1>
             </div>
           </div>
-          <div className="flex w-full items-center justify-between">
+          <div className="flex w-full items-center justify-between mt-8">
             <div>
               <h1 className="font-bold">Service Requested</h1>
               <h3>{item.serviceReq}</h3>
             </div>
-            <div className="flex flex-col gap-y-3 w-max items-end pr-5">
+            <div className="flex flex-col w-max items-end pr-5">
               <h1 className="font-bold">Project Date</h1>
               <div className="flex gap-x-1 items-center">
                 <h3 className="font-bold text-gray-600">{item.projectStart}</h3>
