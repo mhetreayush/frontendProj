@@ -1,8 +1,7 @@
 import { Link } from 'react-router-dom';
 import SearchBar from "./SearchBar";
-
 const NavBar = () =>{
-    const options = ["Completed", "Ongoing" ,"Upcoming"]
+    const options = ["Request", "Completed", "Ongoing" ,"Upcoming"]
     const optionArray = options.map(x=>{
     const path = `/${x}`
         return(
@@ -27,9 +26,6 @@ const NavBar = () =>{
             </div>
 
             <div className="border-b-2 grid grid-cols-4 text-center pt-8 pb-2 items-center ">
-                <Link to="/"  id="request" className="w-3/4 hover:text-blue-600 focus:text-blue-600 focus:overline">
-                    <h1 className="col-span-1 text-lg">Request</h1>
-                </Link>
                 {optionArray}
             </div>
         </div>
