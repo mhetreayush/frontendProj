@@ -1,10 +1,8 @@
 import SuperAdmin from "../MainPages/SuperAdmin"
-import Projects from "../MainPages/Project"
-import Employee from "../MainPages/Employee"
+import EmployeePage from "../MainPages/EmployeePage"
 const AllMainPages ={
     "SuperAdmin": SuperAdmin,
-    "Projects": Projects,
-    "Employee": Employee
+    "EmployeePage": EmployeePage
 }
 
 export default AllMainPages

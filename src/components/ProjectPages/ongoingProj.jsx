@@ -1,9 +1,11 @@
 import CardsData from "../CardsData"
+import NavBar from "../Navbar";
+import RecentUpdates from "../recentUpdates";
 
 const OngoingProj = () =>{
   function Card({ item }) {
     return (
-      <div className="flex flex-col gap-y-5 w-full">
+      <div className="flex flex-col gap-y-5 w-full pt-3">
         <div className="bg-gray-150 py-4 px-6 flex flex-col gap-y-3 rounded-md">
           <div className="grid grid-cols-4 gap-4">
           <div className="flex gap-x-3 items-center">
@@ -72,9 +74,15 @@ const cardElements = CardsData.map( x => {
         />
 )})
 return(
-    <div className="flex flex-col gap-y-5">
-        {cardElements}
-    </div>
+  <div className="grid grid-cols-9 gap-6">
+  <div className="flex flex-col gap-y-5 col-span-6">
+  <NavBar />
+  {cardElements}
+</div>
+<div className="col-span-3">
+  <RecentUpdates name="Manager 1"/>
+</div>
+</div>
 )
 }
 

@@ -12,7 +12,7 @@ const NavBar = () =>{
     })
     return(
     <div>
-        <div className="flex flex-col gap-y-3 w-full">
+        <div className="flex flex-col gap-y-3 w-full pt-5">
             <div className="flex flex-col md:flex-row gap-y-3 md:justify-between w-full">
                 <div className="flex gap-x-2 items-center font-extrabold text-2xl">
                     <a href="#">

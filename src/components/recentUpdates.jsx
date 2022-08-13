@@ -1,6 +1,6 @@
-const RecentUpdates = () =>{
+const RecentUpdates = (props) =>{
     return(
-        <div className="fixed px-6 pt-4 h-min text-sm bg-gray-150">
+        <div className="fixed px-6 pt-4 h-full text-sm bg-gray-150">
             <div className="w-full flex flex-col gap-y-3">
                 <div className="flex w-full justify-between items-center">
                     <div className="flex gap-x-2 items-center">
@@ -27,7 +27,7 @@ const RecentUpdates = () =>{
                 <div className="bg-white rounded-md flex flex-col gap-y-6 px-4 py-5 mt-2">
                     <div className="flex gap-x-2 items-center">
                     <img src={require("./Profiles/Ayush.png")} />
-                    <h1 className="font-bold text-base">Manager 1</h1>
+                    <h1 className="font-bold text-base">{props.name}</h1>
                     </div>
                     
                     <form>

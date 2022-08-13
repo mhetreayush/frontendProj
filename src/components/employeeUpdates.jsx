@@ -1,6 +1,9 @@
 const EmployeeUpdates = () =>{
     return(
-        <div className="fixed px-6 pt-4 h-min text-sm bg-gray-150">
+        <div>
+
+        
+        <div className="fixed px-6 pt-4 h-full text-sm bg-gray-150">
             <div className="w-full flex flex-col gap-y-3">
                 <div className="flex w-full justify-between items-center">
                     <div className="flex gap-x-2 items-center">
@@ -33,6 +36,7 @@ const EmployeeUpdates = () =>{
                 </p>
                 <a className="underline decoration-dotted text-xs text-blue-600">See all</a>
             </div>
+        </div>
         </div>
     )
 }

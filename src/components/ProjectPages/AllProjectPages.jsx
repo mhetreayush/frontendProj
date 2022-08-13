@@ -1,13 +1,16 @@
-import OngoingProj from "./ongoingProj";
-import UpcomingProj from "./upComingProj";
-import CompletedProj from "./completedProj";
-import ReqProj from "./requestProj";
-
-const allProjectPages ={
-    "OngoingProj" : OngoingProj, 
-    "UpcomingProj": UpcomingProj, 
-    "CompletedProj": CompletedProj, 
-    "ReqProj": ReqProj
+import ProjectsPage from "./ProjectsPage";
+import RecentUpdates from "../recentUpdates";
+const AllProjectPages = () =>{
+    return(
+        <div className="grid grid-cols-12 gap-3 h-full">
+            <div className="col-span-9 pt-6">
+                <ProjectsPage />
+            </div>
+            <div className="col-span-3">
+                <RecentUpdates name="Manager 1"/>
+            </div>
+        </div>
+    )
 }
 
-export default allProjectPages
+export default AllProjectPages;

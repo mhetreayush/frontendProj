@@ -2,19 +2,19 @@ import RecentUpdates from "../recentUpdates"
 
 const cardProps = [{
     text:"Tasks in Progress",
-    number:125,
+    number:20,
     color: "#ECEDF7",
     textColor: "#3F4AAF"
 },
 {
     text:"Tasks Completed",
-    number:210,
+    number:95,
     color: "#E6F7F1",
     textColor: "#07AB70"
 },
 {
     text:"Overdue Tasks",
-    number:5,
+    number:2,
     color:"#FFE6E6",
     textColor: "#FF0000"
 }]
@@ -96,13 +96,13 @@ const taskArray = taskStatus.map(x=>{
             </div>
     )
 })
-function SuperAdmin(props){
+function Admin(){
     return(
         <div className="grid grid-cols-9 gap-3">
 
         
         <div className="flex flex-col gap-y-10 pt-7 col-span-6">
-            <h1 className="text-2xl font-extrabold">Welcome back, <span className="text-blue-800">{props.userName}</span></h1>
+            <h1 className="text-2xl font-extrabold">Welcome back, <span className="text-blue-800">Jeffrey Richard</span></h1>
             <div className="grid grid-cols-3 gap-5">
                 {cardArray}
             </div>
@@ -139,10 +139,10 @@ function SuperAdmin(props){
         </div>
 
         <div className="col-span-3">
-            <RecentUpdates name={props.userName}/>
+            <RecentUpdates name="Manager 1"/>
         </div>
         </div>
     )
 }
 
-export default SuperAdmin;
+export default Admin;

@@ -1,4 +1,6 @@
 import CardsData from "../CardsData";
+import NavBar from "../Navbar";
+import RecentUpdates from "../recentUpdates";
 // const starFilled = `<img src = {require("../Icons/starFilled.png")} />`
 const starFilled = <img src={require(`../Icons/starFilled.png`)} />
 const starEmpty = <img src={require(`../Icons/starEmpty.png`)} />
@@ -7,7 +9,7 @@ const CompletedProj = () => {
   function Card({ item }) {
     return (
       <div className="flex flex-col gap-y-5 w-full">
-        <div className="bg-gray-150 my-4 py-4 px-6 flex flex-col gap-y-3 rounded-md">
+        <div className="bg-gray-150 my-3 py-4 px-6 flex flex-col gap-y-3 rounded-md">
           <div className="grid grid-cols-4 gap-4 pr-5">
           <div className="flex gap-x-3 items-center">
                 <img className="profilePicImg" src={require("../Profiles/Ayush.png")} />
@@ -64,7 +66,18 @@ const CompletedProj = () => {
   const cardElements = CardsData.map((x) => {
     return <Card key={x.key} item={x} />;
   });
-  return <div className="flex flex-col gap-y-5">{cardElements}</div>;
+  return (
+    <div className="grid grid-cols-9 gap-6">
+            <div className="flex flex-col gap-y-5 col-span-6">
+            <NavBar/>
+            {cardElements}
+          </div>
+          <div className="col-span-3">
+            <RecentUpdates name="Manager 1"/>
+          </div>
+        </div>   
+  )
+  
 };
 
 export default CompletedProj;
