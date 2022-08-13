@@ -45,7 +45,7 @@ const userProps=[
 
 const cardArray = cardProps.map(x=>{
     return(
-        <div className="w-full px-5 pt-3 pb-5 col-span-1 rounded-md flex flex-col gap-y-3" style={{backgroundColor: `${x.color}`}}>
+        <div className="w-full px-5 pt-3 pt-2 pb-5 col-span-1 rounded-md flex flex-col gap-y-3" style={{backgroundColor: `${x.color}`}}>
                     <h1 className="text-xl font-bold text-gray-800">{x.text}</h1>
                     <h1 className="text-[3rem] font-extrabold" style={{color: `${x.textColor}`}}>{x.number}</h1>
                 </div>
@@ -86,8 +86,30 @@ const taskStatus =[
         completedTasks: 19,
     },
 ]
+const adminTaskStatus =[
+    {
+        userName: "Name 1",
+        numberOfTasks:2,
+        completedTasks: 30,
+    },
+    {
+        userName: "Name 2",
+        numberOfTasks:5,
+        completedTasks: 27,
+    },
+    {
+        userName: "Name 3",
+        numberOfTasks:1,
+        completedTasks: 17,
+    },
+    {
+        userName: "Name 4",
+        numberOfTasks:3,
+        completedTasks: 19,
+    },
+]
 
-const taskArray = taskStatus.map(x=>{
+const taskArray = adminTaskStatus.map(x=>{
     return(
         <div className="grid grid-cols-3 w-full py-3 px-6 text-center rounded-md bg-[#F2F2F9]">
                 <h1 className="col-span-1">{x.userName}</h1>

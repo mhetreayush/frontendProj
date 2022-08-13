@@ -5,8 +5,8 @@ const NavBar = () =>{
     const optionArray = options.map(x=>{
     const path = `/${x}`
         return(
-            <Link to={path} id={x} className="w-3/4 hover:text-blue-600 focus:text-blue-600 focus:overline">
-                    <h1 className="col-span-1 text-lg">{x}</h1>
+            <Link to={path} className="w-3/4 hover:text-blue-600 focus:text-blue-600 focus:overline">
+                    <h1 id={x} className="col-span-1 text-lg">{x}</h1>
                 </Link>
         )
     })

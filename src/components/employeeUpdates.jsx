@@ -1,8 +1,6 @@
 const EmployeeUpdates = () =>{
     return(
         <div>
-
-        
         <div className="fixed px-6 pt-4 h-full text-sm bg-gray-150">
             <div className="w-full flex flex-col gap-y-3">
                 <div className="flex w-full justify-between items-center">

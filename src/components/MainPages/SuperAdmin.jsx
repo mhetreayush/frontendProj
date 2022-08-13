@@ -45,7 +45,7 @@ const userProps=[
 
 const cardArray = cardProps.map(x=>{
     return(
-        <div className="w-full px-5 pt-3 pb-5 col-span-1 rounded-md flex flex-col gap-y-3" style={{backgroundColor: `${x.color}`}}>
+        <div className="w-full px-5 pt-3 pt-2 pb-5 col-span-1 rounded-md flex flex-col gap-y-3" style={{backgroundColor: `${x.color}`}}>
                     <h1 className="text-xl font-bold text-gray-800">{x.text}</h1>
                     <h1 className="text-[3rem] font-extrabold" style={{color: `${x.textColor}`}}>{x.number}</h1>
                 </div>

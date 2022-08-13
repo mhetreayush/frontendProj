@@ -1,4 +1,7 @@
 import { Link } from 'react-router-dom';
+const scrollUp=()=>{
+    window.scrollTo(0,0)
+}
 const Sidebar = () => {
     const SidebarData = [
         "home","team","projects","employee","superadmin"
@@ -7,13 +10,15 @@ const iconClass = "hover:bg-gray-400 flex items-center p-2 text-base font-normal
 // const svgClass = "w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
 const iconArray = SidebarData.map(x => {
     let path
-    
     if (x == "projects") {path ="/Request"}
     else{path = `/${x}`}
     return (
     <li>
                 <Link to={path} id={x}>
+                    <button onClick={scrollUp}>
+
                 <img src={require(`./Icons/${x}.png`)} />
+                    </button>
                 </Link>
     </li>
     )

@@ -6,6 +6,7 @@ import UpcomingProj from "./ProjectPages/upcomingProj";
 import ProjectsPage from "./ProjectPages/ProjectsPage";
 import SuperAdmin from "./MainPages/SuperAdmin";
 import Employee from "./MainPages/Employee";
+import Admin from "./MainPages/Admin";
 
 const AllRoutes = () => {
         return(
@@ -17,7 +18,7 @@ const AllRoutes = () => {
                         <Route path="/Upcoming" element={<UpcomingProj />} />
                         <Route path="/projects" element={<ProjectsPage />} />
                         <Route path="/superadmin" element={<SuperAdmin userName="Jeffrey Richard" />} />
-                        <Route path="/employee" element={<SuperAdmin userName="Manager 1" />} />
+                        <Route path="/employee" element={<Admin />} />
                         <Route path="/home" element={<Employee />} />
                 </Routes>
                 )
