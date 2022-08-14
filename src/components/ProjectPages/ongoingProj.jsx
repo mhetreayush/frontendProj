@@ -44,7 +44,7 @@ const OngoingProj = () =>{
           <div className="flex gap-x-3 items-center">
             <h1 className="font-bold">Progress</h1>
   
-            <div className="w-full bg-none rounded-full h-2.5 dark:bg-gray-700">
+            <div className="w-full bg-none rounded-md h-2.5 bg-gray-200">
               <div
                 className="bg-green-400 h-2.5 rounded-md"
                 style={{ width: `${item.progressWidth}` }}

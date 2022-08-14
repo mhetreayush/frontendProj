@@ -109,13 +109,13 @@ function SuperAdmin(props){
             <div>
             <div className="grid grid-cols-10 gap-2">
                 <div className="col-span-4">
-                    <h3 className="mb-3">Projects close to deadline</h3>
+                    <h3 className="mb-3 ml-1 text-sm font-bold">Projects close to deadline</h3>
                     <div className="col-span-4 flex flex-col gap-y-3">
                         {userArray}
                     </div>
                 </div>
                 <div className="col-span-6">
-                <h3 className="mb-3">Task created vs Task completed</h3>
+                <h3 className="mb-3 ml-1 text-sm font-bold">Task created vs Task completed</h3>
                     <div className="col-span-6">
                         <div className="bg-[#F2F3FA] h-full"> {/* For Graph */}
                             Graph will come here
@@ -125,7 +125,7 @@ function SuperAdmin(props){
             </div>
         </div>
             <div>
-            <h3 className="mb-3">Employees Progress</h3>
+            <h3 className="mb-3 ml-1 text-sm font-bold">Employees Progress</h3>
             <div className="grid grid-cols-3 w-full py-3 px-6 text-center rounded-md font-bold bg-[#D9DBEF]">
                 <h1 className="col-span-1">Service</h1>
                 <h1 className="col-span-1">Ongoing Task</h1>
