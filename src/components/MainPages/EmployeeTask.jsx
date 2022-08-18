@@ -1,5 +1,5 @@
 const EmployeeTask = (props) => {
-    const cardClass = `grid grid-cols-5 w-full gap-4  px-4 py-5 rounded-md bg-[${props.bgColor}]`
+    const cardClass = `flex flex-col md:grid grid-cols-5 w-full gap-4  px-4 py-5 rounded-md bg-[${props.bgColor}]`
     return(
         <div>
                 <div className={cardClass}>

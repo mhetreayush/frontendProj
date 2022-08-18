@@ -7,7 +7,7 @@ const UpcomingProj = () =>{
         return (
           <div className="flex flex-col gap-y-5 w-full pt-3">
             <div className="bg-gray-150 py-4 px-6 flex flex-col gap-y-3 rounded-md">
-              <div className="grid grid-cols-3 md:grid-cols-4 gap-4">
+              <div className="grid md:grid-cols-4 gap-4">
                 <div className="flex gap-x-3 items-center">
                 <img className="profilePicImg" src={require("../Profiles/Ayush.png")} />
                 <h1>{item.profileName}</h1>
@@ -21,12 +21,12 @@ const UpcomingProj = () =>{
                   {item.email}
                 </h1>
               </div>
-              <div className="flex w-full items-center justify-between">
-                  <div>
+              <div className="md:flex w-full items-center justify-between">
+                  <div className="my-3 md:my-0">
                       <h1 className="font-bold">Service Requested</h1>
                       <h3>{item.serviceReq}</h3>
                   </div>
-                  <div className="flex flex-col w-max items-end pr-5">
+                  <div className="flex flex-col w-max md:items-end pr-5">
                       <h1 className="font-bold">Start Date</h1>
                       <div className="flex gap-x-1 items-center">
                       <h3 className="font-bold text-gray-600">{item.projectStart}</h3>
@@ -59,12 +59,12 @@ const UpcomingProj = () =>{
             />
     )})
     return(
-      <div className="grid grid-cols-9 gap-6">
+      <div className="md:grid grid-cols-9 gap-6">
             <div className="flex flex-col gap-y-5 col-span-6">
             <NavBar />
             {cardElements}
           </div>
-          <div className="col-span-3">
+          <div className="hidden md:block md:col-span-3">
             <RecentUpdates name="Manager 1"/>
           </div>
         </div>

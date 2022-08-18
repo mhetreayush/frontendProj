@@ -19,7 +19,7 @@ const AllRoutes = () => {
                         <Route path="/projects" element={<ProjectsPage />} />
                         <Route path="/superadmin" element={<SuperAdmin userName="Jeffrey Richard" />} />
                         <Route path="/employee" element={<Admin />} />
-                        <Route path="/home" element={<Employee />} />
+                        <Route path="/" element={<Employee />} />
                 </Routes>
                 )
 }

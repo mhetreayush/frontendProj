@@ -4,39 +4,63 @@ const scrollUp=()=>{
 }
 const Sidebar = () => {
     const SidebarData = [
-        "home","team","projects","employee","superadmin"
+        "projects","employee","superadmin" //Team is to be added
 ]
-const iconClass = "hover:bg-gray-400 flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
-// const svgClass = "w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-const iconArray = SidebarData.map(x => {
-    let path
-    if (x == "projects") {path ="/Request"}
-    else{path = `/${x}`}
-    return (
-    <li>
-                <Link to={path} id={x}>
-                    <button onClick={scrollUp}>
+const iconClass = "hidden md:block p-4 hover:bg-blue-300 hover:filter-invert rounded-md hover:bg-gray-400 flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+       
+return (
 
-                <img src={require(`./Icons/${x}.png`)} />
+    
+        <div className="h-fit md:w-fit drop-shadow border-t-2 md:border-r-2 border-r-gray-200 fixed bottom-0 z-50 w-full" aria-label="Sidebar">
+    <div className="md:h-screen overflow-y-auto flex flex-row md:flex-col items-center justify-between md:py-10 px-3 bg-gray-150 rounded dark:bg-gray-800">
+        <div className='hidden md:block text-lg p-3 border-4 rounded-md border-gray-400 bg-black'>
+            <h1 className='font-extrabold text-white'>SAS</h1>
+        </div>
+        <div className='w-full'>
+        <div className="md:space-y-10 w-full py-2 rounded-tr-md rounded-tl-md justify-between flex md:flex-col md:h-3/4 items-center">
+        
+    <div className='self-center'>
+                <Link to="/" id="home" >
+                    <button  className="self-center">
+
+                <img className='p-4 hover:bg-blue-300 rounded-md hover:filter-invert' src={require(`./Icons/home.png`)} />
                     </button>
                 </Link>
-    </li>
-    )
-})        
-return (
-       
-        <aside className="w-fit drop-shadow-lg border-r-2 border-r-gray-200 fixed" aria-label="Sidebar">
-    <div className="overflow-y-auto flex flex-col justify-between py-10 px-6 h-screen bg-gray-150 rounded dark:bg-gray-800">
-        <div>
-        <ul className="space-y-10 flex flex-col h-3/4 justify-between items-center">
-            {iconArray}
-        </ul>
+    </div>
+    <div className='self-center'>
+                <Link to="/Request" id="projects" >
+                    <button  className="self-center">
+
+                <img className='p-4 hover:bg-blue-300 rounded-md hover:filter-invert' src={require(`./Icons/projects.png`)} />
+                    </button>
+                </Link>
+    </div>
+    <div className='md:hidden text-lg p-3 rounded-md border-gray-400 bg-black'>
+            <h1 className='font-extrabold text-white'>SAS</h1>
+        </div>
+    <div className='self-center'>
+                <Link to="/employee" id="employee" >
+                    <button  className="self-center">
+
+                <img className='p-4 hover:bg-blue-300 rounded-md hover:filter-invert' src={require(`./Icons/employee.png`)} />
+                    </button>
+                </Link>
+    </div>
+    <div className='self-center'>
+                <Link to="/superAdmin" id="superadmin" >
+                    <button  className="self-center">
+
+                <img className='p-4 hover:bg-blue-300 rounded-md hover:filter-invert' src={require(`./Icons/superadmin.png`)} />
+                    </button>
+                </Link>
+    </div>
+        </div>
     </div>
                 <a href="#" className = {iconClass}>
                     <img src={require(`./Icons/logout.png`)} />
                 </a>
     </div>
-        </aside>    
+        </div>    
 )
 }
 

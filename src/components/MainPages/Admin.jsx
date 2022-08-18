@@ -1,5 +1,5 @@
 import RecentUpdates from "../recentUpdates"
-
+import Graph from "../Graph"
 const cardProps = [{
     text:"Tasks in Progress",
     number:20,
@@ -45,7 +45,7 @@ const userProps=[
 
 const cardArray = cardProps.map(x=>{
     return(
-        <div className="w-full px-5 pt-3 pt-2 pb-5 col-span-1 rounded-md flex flex-col gap-y-3" style={{backgroundColor: `${x.color}`}}>
+        <div className="w-full px-5 pt-3 my-5 md:my-0 pb-5 col-span-1 rounded-md flex flex-col gap-y-3" style={{backgroundColor: `${x.color}`}}>
                     <h1 className="text-xl font-bold text-gray-800">{x.text}</h1>
                     <h1 className="text-[3rem] font-extrabold" style={{color: `${x.textColor}`}}>{x.number}</h1>
                 </div>
@@ -107,11 +107,27 @@ const adminTaskStatus =[
         numberOfTasks:3,
         completedTasks: 19,
     },
+    {
+        userName: "Name 5",
+        numberOfTasks:7,
+        completedTasks: 23,
+    },
+    {
+        userName: "Name 6",
+        numberOfTasks:2,
+        completedTasks: 31,
+    },
+    {
+        userName: "Name 7",
+        numberOfTasks:5,
+        completedTasks: 8,
+    },
+
 ]
 
 const taskArray = adminTaskStatus.map(x=>{
     return(
-        <div className="grid grid-cols-3 w-full py-3 px-6 text-center rounded-md bg-[#F2F2F9]">
+        <div className="grid grid-cols-3 even:bg-gray-150 drop-shadow border-black odd:bg-white w-full py-3 px-6 text-center rounded-md bg-[#F2F2F9]">
                 <h1 className="col-span-1">{x.userName}</h1>
                 <h1 className="col-span-1">{x.numberOfTasks}</h1>
                 <h1 className="col-span-1">{x.completedTasks}</h1>
@@ -120,27 +136,27 @@ const taskArray = adminTaskStatus.map(x=>{
 })
 function Admin(){
     return(
-        <div className="grid grid-cols-9 gap-3">
+        <div className="md:grid grid-cols-9 gap-3">
 
         
         <div className="flex flex-col gap-y-10 pt-7 col-span-6">
             <h1 className="text-2xl font-extrabold">Welcome back, <span className="text-blue-800">Jeffrey Richard</span></h1>
-            <div className="grid grid-cols-3 gap-5">
+            <div className="md:grid grid-cols-3 gap-5">
                 {cardArray}
             </div>
             <div>
-            <div className="grid grid-cols-10 gap-2">
-                <div className="col-span-4">
+            <div className="md:grid grid-cols-10 gap-2">
+                <div className="col-span-4 mt-5">
                     <h3 className="mb-3">Projects close to deadline</h3>
                     <div className="col-span-4 flex flex-col gap-y-3">
                         {userArray}
                     </div>
                 </div>
-                <div className="col-span-6">
+                <div className="col-span-6 mt-5">
                 <h3 className="mb-3">Task created vs Task completed</h3>
                     <div className="col-span-6">
-                        <div className="bg-[#F2F3FA] h-full"> {/* For Graph */}
-                            Graph will come here
+                        <div className="bg-[#F2F3FA] h-full rounded-md"> {/* For Graph */}
+                            <Graph />
                         </div>
                     </div>
                 </div>
@@ -160,7 +176,7 @@ function Admin(){
             </div>
         </div>
 
-        <div className="col-span-3">
+        <div className="hidden md:block md:col-span-3">
             <RecentUpdates name="Manager 1"/>
         </div>
         </div>

@@ -1,3 +1,4 @@
+import Graph from "../Graph"
 import RecentUpdates from "../recentUpdates"
 
 const cardProps = [{
@@ -45,7 +46,7 @@ const userProps=[
 
 const cardArray = cardProps.map(x=>{
     return(
-        <div className="w-full px-5 pt-3 pt-2 pb-5 col-span-1 rounded-md flex flex-col gap-y-3" style={{backgroundColor: `${x.color}`}}>
+        <div className="w-full px-5 pt-3 my-5 md:my-0 pb-5 col-span-1 rounded-md flex flex-col gap-y-3" style={{backgroundColor: `${x.color}`}}>
                     <h1 className="text-xl font-bold text-gray-800">{x.text}</h1>
                     <h1 className="text-[3rem] font-extrabold" style={{color: `${x.textColor}`}}>{x.number}</h1>
                 </div>
@@ -89,7 +90,7 @@ const taskStatus =[
 
 const taskArray = taskStatus.map(x=>{
     return(
-        <div className="grid grid-cols-3 w-full py-3 px-6 text-center rounded-md bg-[#F2F2F9]">
+        <div className="grid grid-cols-3 w-full even:bg-gray-150 odd:bg-white py-3 px-6 text-center rounded-md bg-[#F2F2F9]">
                 <h1 className="col-span-1">{x.userName}</h1>
                 <h1 className="col-span-1">{x.numberOfTasks}</h1>
                 <h1 className="col-span-1">{x.completedTasks}</h1>
@@ -98,47 +99,47 @@ const taskArray = taskStatus.map(x=>{
 })
 function SuperAdmin(props){
     return(
-        <div className="grid grid-cols-9 gap-3">
+        <div className="md:grid grid-cols-9 gap-3">
 
         
-        <div className="flex flex-col gap-y-10 pt-7 col-span-6">
+        <div className="flex flex-col gap-y-10 pt-7 col-span-9 md:col-span-6">
             <h1 className="text-2xl font-extrabold">Welcome back, <span className="text-blue-800">{props.userName}</span></h1>
-            <div className="grid grid-cols-3 gap-5">
+            <div className="md:grid grid-cols-3 gap-5">
                 {cardArray}
             </div>
             <div>
-            <div className="grid grid-cols-10 gap-2">
-                <div className="col-span-4">
+            <div className="md:grid grid-cols-10 gap-2">
+                <div className="col-span-4 mt-5">
                     <h3 className="mb-3 ml-1 text-sm font-bold">Projects close to deadline</h3>
                     <div className="col-span-4 flex flex-col gap-y-3">
                         {userArray}
                     </div>
                 </div>
                 <div className="col-span-6">
-                <h3 className="mb-3 ml-1 text-sm font-bold">Task created vs Task completed</h3>
-                    <div className="col-span-6">
-                        <div className="bg-[#F2F3FA] h-full"> {/* For Graph */}
-                            Graph will come here
+                <h3 className="mb-3 ml-1 mt-5 text-sm font-bold">Task created vs Task completed</h3>
+                    <div className="col-span-6 rounded-md">
+                        <div className="bg-[#F2F3FA] h-full rounded-md"> {/* For Graph */}
+                            <Graph />
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-            <div>
+            <div className="mt-5">
             <h3 className="mb-3 ml-1 text-sm font-bold">Employees Progress</h3>
             <div className="grid grid-cols-3 w-full py-3 px-6 text-center rounded-md font-bold bg-[#D9DBEF]">
-                <h1 className="col-span-1">Service</h1>
-                <h1 className="col-span-1">Ongoing Task</h1>
-                <h1 className="col-span-1">Completed Task</h1>
+                <h1 className="self-center col-span-1">Service</h1>
+                <h1 className="self-center col-span-1">Ongoing Task</h1>
+                <h1 className="self-center col-span-1">Completed Task</h1>
             </div>
 
-            <div className="flex flex-col gap-y-2 w-full mt-4">
+            <div className="flex flex-col gap-y-2 w-full mt-5">
                 {taskArray}
             </div>
             </div>
         </div>
 
-        <div className="col-span-3">
+        <div className="hidden md:flex md:col-span-3">
             <RecentUpdates name={props.userName}/>
         </div>
         </div>
