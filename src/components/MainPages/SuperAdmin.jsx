@@ -90,10 +90,10 @@ const taskStatus =[
 
 const taskArray = taskStatus.map(x=>{
     return(
-        <div className="grid grid-cols-3 w-full even:bg-gray-150 odd:bg-white py-3 px-6 text-center rounded-md bg-[#F2F2F9]">
+        <div className="grid grid-cols-3 w-full even:bg-gray-150 drop-shadow border-black odd:bg-white py-3 px-6 text-center rounded-md bg-[#F2F2F9]">
                 <h1 className="col-span-1">{x.userName}</h1>
                 <h1 className="col-span-1">{x.numberOfTasks}</h1>
-                <h1 className="col-span-1">{x.completedTasks}</h1>
+                <h1 className="col-span-1">{x.numberOfTasks}</h1>
             </div>
     )
 })
