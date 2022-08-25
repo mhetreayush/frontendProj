@@ -1,8 +1,11 @@
 const EmployeeTask = (props) => {
-  const cardClass = `flex flex-col md:grid grid-cols-5 w-full gap-4  px-4 py-5 rounded-md bg-[${props.bgColor}]`;
+  const cardClass = `flex flex-col md:grid grid-cols-5 w-full gap-4  px-4 py-5 rounded-md`;
+  const cardColor = {
+    backgroundColor: props.bgColor
+  } 
   return (
     <div>
-      <div className={cardClass}>
+      <div className={cardClass} style={cardColor}>
         <div className="col-span-1 flex flex-col">
           <h3 className="text-xs">Task</h3>
           <h1 className="font-bold">{props.name}</h1>

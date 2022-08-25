@@ -80,28 +80,7 @@ const userArray = userProps.map((x) => {
   );
 });
 
-const taskStatus = [
-  {
-    userName: "Service 1",
-    numberOfTasks: 2,
-    completedTasks: 30,
-  },
-  {
-    userName: "Service 2",
-    numberOfTasks: 5,
-    completedTasks: 27,
-  },
-  {
-    userName: "Service 3",
-    numberOfTasks: 1,
-    completedTasks: 17,
-  },
-  {
-    userName: "Service 4",
-    numberOfTasks: 3,
-    completedTasks: 19,
-  },
-];
+
 const adminTaskStatus = [
   {
     userName: "Name 1",

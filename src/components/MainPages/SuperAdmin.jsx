@@ -1,6 +1,6 @@
 import Graph from "../Graph"
 import RecentUpdates from "../recentUpdates"
-
+import {faker} from "@faker-js/faker"
 const cardProps = [{
     text:"Tasks in Progress",
     number:125,
@@ -57,7 +57,7 @@ const userArray = userProps.map(x=>{
         <div className="grid grid-cols-6 w-full gap-3 items-center px-2 py-4 rounded-md" style={{backgroundColor: `${x.color}`}}>
             <img className="col-span-1" src={require("../Profiles/Ayush.png")}/>
             <div className="col-span-3">
-                <h1 className="font-bold text-black">{x.userName}</h1>
+                <h1 className="font-bold text-black tracking-wide">{faker.name.fullName()}</h1>
                 <h1 className="text-sx text-gray-800">{x.userRole}</h1>
             </div>
             <h1 className="col-span-2" style={{color: `${x.textColor}`}}>{x.daysLeft} days left</h1>
@@ -97,13 +97,14 @@ const taskArray = taskStatus.map(x=>{
             </div>
     )
 })
-function SuperAdmin(props){
+function SuperAdmin(){
+    const superAdminName = faker.name.fullName();
     return(
         <div className="md:grid grid-cols-9 gap-3">
 
         
         <div className="flex flex-col gap-y-10 pt-7 col-span-9 md:col-span-6">
-            <h1 className="text-2xl font-extrabold">Welcome back, <span className="text-blue-800">{props.userName}</span></h1>
+            <h1 className="text-2xl font-extrabold">Welcome back, <span className="text-blue-800">{superAdminName}</span></h1>
             <div className="md:grid grid-cols-3 gap-5">
                 {cardArray}
             </div>
@@ -140,7 +141,7 @@ function SuperAdmin(props){
         </div>
 
         <div className="hidden md:flex md:col-span-3">
-            <RecentUpdates name={props.userName}/>
+            <RecentUpdates name={superAdminName}/>
         </div>
         </div>
     )

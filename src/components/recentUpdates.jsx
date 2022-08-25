@@ -1,3 +1,4 @@
+import {faker} from "@faker-js/faker"
 const RecentUpdates = (props) =>{
     return(
         <div className="fixed px-6 pt-4 h-full text-sm bg-gray-150">
@@ -10,7 +11,7 @@ const RecentUpdates = (props) =>{
                     <img className="profilePicImg" src={require("./Profiles/Ayush.png")} />
                 </div>
                 <h1 className="font-bold text-base">Recent Updates</h1>
-                <p>Service Request from <a href="#"><span className="text-blue-600">Rahul Thakar</span></a> Assign now</p>
+                <p>Service Request from <a href="#"><span className="text-blue-600">{faker.name.fullName()}</span></a> Assign now</p>
                 <button className="px-4 py-2 bg-violetCustom rounded-md text-white font-bold w-fit">
                   Assign
                 </button>

@@ -51,17 +51,15 @@ function Employee() {
           <div className="flex md:flex-col w-full col-span-4 gap-5 md:gap-9">
             {cardArray}
           </div>
-          <div className="col-span-6">
+          <div className="col-span-6 w-full">
             <div className="bg-[#F2F3FA] h-full rounded-md">
-              {" "}
-              {/* For Graph */}
               <Graph />
             </div>
           </div>
         </div>
         <div className="mt-5">
           <h3 className="mb-3 ml-1 text-sm font-bold">Ongoing Project</h3>
-          <div className="grid grid-rows-2 w-full px-4 py-3 rounded-md bg-[#ECEDF7]">
+          <div className="md:grid grid-rows-2 w-full px-4 py-3 rounded-md bg-[#ECEDF7]">
             <div className="flex row-span-1 flex-col md:grid grid-cols-10">
               <div className="md:col-span-2 flex-col">
                 <h3 className="text-xs">Name</h3>

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 const Sidebar = () => {
-const iconClass = "hidden md:block p-4 hover:bg-blue-300 hover:filter-invert rounded-md hover:bg-gray-400 flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+const iconClass = "hidden md:block p-4 hover:bg-blue-300 hover:filter-invert rounded-md flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white dark:hover:bg-gray-700"
        
 return (
 
@@ -50,7 +50,7 @@ return (
     </div>
         </div>
     </div>
-                <a href="#" className = {iconClass}>
+                <a href="#" className = "hidden md:block p-4 hover:bg-red-300 rounded-md rounded-lg">
                     <img src={require(`./Icons/logout.png`)} />
                 </a>
     </div>
