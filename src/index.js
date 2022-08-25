@@ -12,3 +12,5 @@ root.render(
     </React.StrictMode>
   </BrowserRouter>,
 );
+
+// Pull data using Faker.js

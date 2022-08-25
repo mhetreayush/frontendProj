@@ -4,7 +4,7 @@ const NavBar = () =>{
     const options1 = ["Request", "Completed"]
     const options2 = ["Ongoing" ,"Upcoming"]
     const optionArray1 = options1.map(x=>{
-    const path = `/${x}`
+    const path = `/projects/${x}`
         return(
             <Link to={path} className=" hover:text-blue-600 focus:text-blue-600 focus:overline">
                     <h1 id={x} className="col-span-1 text-lg">{x}</h1>
@@ -12,7 +12,7 @@ const NavBar = () =>{
         )
     })
     const optionArray2 = options2.map(x=>{
-    const path = `/${x}`
+    const path = `/projects/${x}`
         return(
             <Link to={path} className=" hover:text-blue-600 focus:text-blue-600 focus:overline">
                     <h1 id={x} className="col-span-1 text-lg">{x}</h1>

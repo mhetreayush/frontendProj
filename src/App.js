@@ -12,7 +12,8 @@ function App() {
       <div className="md:col-span-11 flex flex-col gap-y-3 pb-3 px-3 justify-start w-full h-full">
         {/* Middlemost Part */}
         <div className="flex flex-col gap-y-6 pb-3 w-full justify-start">
-          <AllRoutes />
+        {/* Change projects routes to projects/... */}
+          <AllRoutes /> 
         </div>
       </div>
     </div>
