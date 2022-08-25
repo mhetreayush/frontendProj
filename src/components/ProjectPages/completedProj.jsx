@@ -1,11 +1,14 @@
 import CardsData from "../CardsData";
 import NavBar from "../Navbar";
 import RecentUpdates from "../recentUpdates";
+import {faker} from "@faker-js/faker"
 // const starFilled = `<img src = {require("../Icons/starFilled.png")} />`
 const starFilled = <img src={require(`../Icons/starFilled.png`)} />
 const starEmpty = <img src={require(`../Icons/starEmpty.png`)} />
 // const starEmpty = `<img src = ${"../Icons/starEmpty.png"} />`
 const CompletedProj = () => {
+  let userRole = faker.company.bs();
+  userRole = userRole[0][0].toUpperCase() + userRole.slice(1)
   function Card({ item }) {
     return (
       <div className="flex flex-col gap-y-5 w-full">
@@ -13,18 +16,18 @@ const CompletedProj = () => {
         <div className="grid md:grid-cols-4 gap-4 relative">
           <div className="flex gap-x-3 items-center">
                 <img className="profilePicImg" src={require("../Profiles/Ayush.png")} />
-                <h1>{item.profileName}</h1>
+                <h1>{faker.name.fullName()}</h1>
                 </div>
                 <div>
                 <div className="md:flex gap-x-10">
                 </div>
             <h1 className="flex items-center gap-x-2">
               <img src={require(".././Icons/phone.png")} alt="" />
-              {item.phone}
+              {faker.phone.number()}
             </h1>
             <h1 className="flex items-center gap-x-2">
               <img src={require(".././Icons/email.png")} alt="" />
-              {item.email}
+              {faker.internet.email()}
             </h1>
             </div>
             <div className="absolute top-0 right-3 px-4 flex items-center h-fit py-2 bg-green-300 rounded-md justify-self-end self-center">
@@ -34,7 +37,7 @@ const CompletedProj = () => {
           <div className="md:flex w-full items-center justify-between mt-8">
             <div className="my-3 md:my-0">
               <h1 className="font-bold">Service Requested</h1>
-              <h3>{item.serviceReq}</h3>
+              <h3>{userRole}</h3>
             </div>
             <div className="flex flex-col w-max md:items-end pr-5">
               <h1 className="font-bold">Project Date</h1>
