@@ -10,13 +10,13 @@ import Admin from "./MainPages/Admin";
 const AllRoutes = () => {
         return(
                 <Routes>
-                        <Route path="/projects/Request" element={<ReqProj />} />
-                        <Route path="/projects/Completed" element={<CompletedProj />} />
-                        <Route path="/projects/Ongoing" element={<OngoingProj />} />
-                        <Route path="/projects/Upcoming" element={<UpcomingProj />} />
-                        <Route path="/superadmin" element={<SuperAdmin />} />
-                        <Route path="/employee" element={<Admin />} />
-                        <Route path="/" element={<Employee />} />
+                        <Route path="frontendProj/projects/Request" element={<ReqProj />} />
+                        <Route path="frontendProj/projects/Completed" element={<CompletedProj />} />
+                        <Route path="frontendProj/projects/Ongoing" element={<OngoingProj />} />
+                        <Route path="frontendProj/projects/Upcoming" element={<UpcomingProj />} />
+                        <Route path="frontendProj/superadmin" element={<SuperAdmin />} />
+                        <Route path="frontendProj/employee" element={<Admin />} />
+                        <Route path="frontendProj/" element={<Employee />} />
                 </Routes>
                 )
 }

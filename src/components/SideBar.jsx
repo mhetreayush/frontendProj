@@ -14,7 +14,7 @@ return (
         <div className="md:space-y-10 w-full py-2 rounded-tr-md rounded-tl-md justify-between flex md:flex-col md:h-3/4 items-center">
         
     <div className='self-center'>
-                <Link to="/" id="home" >
+                <Link to="frontendProj/" id="home" >
                     <button  className="self-center">
 
                 <img className='p-4 hover:bg-blue-300 rounded-md hover:filter-invert' src={require(`./Icons/home.png`)} />
@@ -22,7 +22,7 @@ return (
                 </Link>
     </div>
     <div className='self-center'>
-                <Link to="/projects/Request" id="projects" >
+                <Link to="frontendProj/projects/Request" id="projects" >
                     <button  className="self-center">
 
                 <img className='p-4 hover:bg-blue-300 rounded-md hover:filter-invert' src={require(`./Icons/projects.png`)} />
@@ -33,7 +33,7 @@ return (
             <h1 className='font-extrabold text-white'>SAAS</h1>
         </div>
     <div className='self-center'>
-                <Link to="/employee" id="employee" >
+                <Link to="frontendProj/employee" id="employee" >
                     <button  className="self-center">
 
                 <img className='p-4 hover:bg-blue-300 rounded-md hover:filter-invert' src={require(`./Icons/employee.png`)} />
@@ -41,7 +41,7 @@ return (
                 </Link>
     </div>
     <div className='self-center'>
-                <Link to="/superAdmin" id="superadmin" >
+                <Link to="frontendProj/superAdmin" id="superadmin" >
                     <button  className="self-center">
 
                 <img className='p-4 hover:bg-blue-300 rounded-md hover:filter-invert' src={require(`./Icons/superadmin.png`)} />
