@@ -7,10 +7,7 @@ const NavBar = () => {
       <div className="flex flex-col gap-y-3 w-full pt-5 bg-white">
         <div className="flex justify-between px-3 w-full">
           <div className="flex gap-x-2 items-center font-extrabold text-2xl">
-            <a href="#">
-              <img src={require("./Icons/backArrow.png")} />
-            </a>
-            <h1>Project</h1>
+            <h1>Projects</h1>
           </div>
           <div className="w-2/4">
             <SearchBar />

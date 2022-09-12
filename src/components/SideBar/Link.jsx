@@ -1,8 +1,7 @@
 import React from "react"
-import { Link } from "react-router-dom"
 export default function ButtonLink(props) {
     const styles = {
-        backgroundColor: props.on ? "#93c5fd" : "#D1D5DB",
+        backgroundColor: props.on ? "#93c5fd" : "transparent",
     }
     return (
         <button
@@ -12,7 +11,7 @@ export default function ButtonLink(props) {
                 return props.toggle(props.id, props.component)
                 }
             }
-        ><img className="p-4 rounded-md" src={require(`../Icons/${props.id}.png`)}/>
+        ><img alt={props.id} className="p-4 rounded-md" src={require(`../Icons/${props.id}.png`)}/>
         </button>
     )
 }
