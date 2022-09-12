@@ -1,6 +1,7 @@
 import Graph from "../Graph"
 import RecentUpdates from "../recentUpdates"
 import {faker} from "@faker-js/faker"
+import AllPages from "../ProjectPages/ProjectsPage"
 const cardProps = [{
     text:"Tasks in Progress",
     number:125,
@@ -100,9 +101,7 @@ const taskArray = taskStatus.map(x=>{
 function SuperAdmin(){
     const superAdminName = faker.name.fullName();
     return(
-        <div className="md:grid grid-cols-9 gap-3">
-
-        
+        <div>
         <div className="flex flex-col gap-y-10 pt-7 col-span-9 md:col-span-6">
             <h1 className="text-2xl font-extrabold">Welcome back, <span className="text-blue-800">{superAdminName}</span></h1>
             <div className="md:grid grid-cols-3 gap-5">
@@ -138,10 +137,6 @@ function SuperAdmin(){
                 {taskArray}
             </div>
             </div>
-        </div>
-
-        <div className="hidden md:flex md:col-span-3">
-            <RecentUpdates name={superAdminName}/>
         </div>
         </div>
     )

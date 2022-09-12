@@ -1,12 +1,13 @@
-import AllRoutes from "../Routes";
 import NavBar from "../Navbar";
-const ProjectsPage =() =>{
-    return(
-        <div>
-            <NavBar />
-            <AllRoutes />
-        </div>
-    )
-}
-
-export default ProjectsPage
+import ReqProj from "./requestProj";
+const AllPages = () => {
+  return (
+    <div>
+      <NavBar />
+      <div id="allProjectPages">
+        <ReqProj />
+      </div>
+    </div>
+  );
+};
+export default AllPages;

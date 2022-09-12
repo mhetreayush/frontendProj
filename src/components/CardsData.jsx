@@ -5,6 +5,7 @@ const CardsData = [
         progressWidth: "25%",
         projectStart:"01-08-22",
         projectEnd:"04-08-22"
+        
     },
     {
         description: descriptionText,

@@ -5,7 +5,7 @@ const iconClass = "hidden md:block p-4 hover:bg-blue-300 hover:filter-invert rou
 return (
 
     
-        <div className="h-fit md:w-fit drop-shadow border-t-2 md:border-r-2 border-r-gray-200 fixed bottom-0 z-50 w-full" aria-label="Sidebar">
+        <div className="sidebar h-fit md:w-fit drop-shadow border-t-2 md:border-r-2 border-r-gray-200 fixed bottom-0 z-50 w-full" aria-label="Sidebar">
     <div className="md:h-screen overflow-y-auto flex flex-row md:flex-col items-center justify-between md:py-10 px-3 bg-gray-150 rounded dark:bg-gray-800">
         <div className='hidden md:block text-lg p-3 border-4 rounded-md border-gray-400 bg-black'>
             <h1 className='font-extrabold text-white'>SAAS</h1>
@@ -22,7 +22,7 @@ return (
                 </Link>
     </div>
     <div className='self-center'>
-                <Link to="frontendProj/projects/Request" id="projects" >
+                <Link to="frontendProj/projects" id="projects" >
                     <button  className="self-center">
 
                 <img className='p-4 hover:bg-blue-300 rounded-md hover:filter-invert' src={require(`./Icons/projects.png`)} />

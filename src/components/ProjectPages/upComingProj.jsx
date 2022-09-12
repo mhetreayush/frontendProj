@@ -11,10 +11,12 @@ const UpcomingProj = () =>{
           <div className="flex flex-col gap-y-5 w-full pt-3">
             <div className="bg-gray-150 py-4 px-6 flex flex-col gap-y-3 rounded-md">
               <div className="grid md:grid-cols-4 gap-4">
-                <div className="flex gap-x-3 items-center">
+                <div className="flex gap-x-3 col-span-2 items-center">
                 <img className="profilePicImg" src={require("../Profiles/Ayush.png")} />
                 <h1>{faker.name.fullName()}</h1>
                 </div>
+                <div className="col-span-2">
+
                 <h1 className="flex items-center gap-x-2">
                   <img src={require(".././Icons/phone.png")} alt="" />
                   {faker.phone.number()}
@@ -23,6 +25,7 @@ const UpcomingProj = () =>{
                   <img src={require(".././Icons/email.png")} alt="" />
                   {faker.internet.email()}
                 </h1>
+                </div>
               </div>
               <div className="md:flex w-full items-center justify-between">
                   <div className="my-3 md:my-0">
@@ -62,14 +65,8 @@ const UpcomingProj = () =>{
             />
     )})
     return(
-      <div className="md:grid grid-cols-9 gap-6">
-            <div className="flex flex-col gap-y-5 col-span-6">
-            <NavBar />
-            {cardElements}
-          </div>
-          <div className="hidden md:block md:col-span-3">
-            <RecentUpdates name="Manager 1"/>
-          </div>
+      <div>
+        {cardElements}
         </div>
     )
 }

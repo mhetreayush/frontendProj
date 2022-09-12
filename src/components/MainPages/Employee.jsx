@@ -1,6 +1,5 @@
 import cardsData from "./cardsData";
 import EmployeeTask from "./EmployeeTask";
-import EmployeeUpdates from "../employeeUpdates";
 import Graph from "../Graph";
 import { faker } from "@faker-js/faker";
 const cardArray = cardsData.cardProps.map((x) => {
@@ -41,7 +40,7 @@ const userArray = cardsData.userProps.map((x) => {
 
 function Employee() {
   return (
-    <div className="grid grid-cols-9 gap-3">
+    <div>
       <div className="drop-shadow-xl flex flex-col gap-y-3 px-3 pt-7 w-full col-span-9 md:col-span-6">
         <h1 className="text-2xl font-extrabold">
           Welcome back,{" "}
@@ -93,10 +92,12 @@ function Employee() {
               <h3 className="mb-3 ml-1 text-sm font-bold">Upcoming Projects</h3>
               <div className="col-span-4 flex flex-col gap-y-3">
                 {userArray}
+                <div className="self-end">
+                  <button className="underline decoration-dotted text-xs text-blue-600 w-full">
+                    See all
+                  </button>
+                </div>
               </div>
-              <a className="underline decoration-dotted text-xs text-blue-600 self-end w-full">
-                See all
-              </a>
             </div>
             <div className="col-span-6 mt-5">
               <h3 className="mb-3 ml-1 text-sm font-bold">
@@ -113,16 +114,15 @@ function Employee() {
                   description="Lorem ipsum dolor sit amet....."
                   bgColor="#F8EBFF"
                 />
-                <a className="underline decoration-dotted text-xs text-blue-600 self-end w-full">
-                  See all
-                </a>
+                <div className="self-end">
+                  <button className="underline decoration-dotted text-xs text-blue-600 w-full">
+                    See all
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div className="hidden md:block md:col-span-3">
-        <EmployeeUpdates />
       </div>
     </div>
   );

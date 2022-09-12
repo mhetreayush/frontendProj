@@ -1,12 +1,17 @@
 import {faker} from "@faker-js/faker"
 const RecentUpdates = (props) =>{
+    let manager = faker.name.lastName()
     return(
         <div className="fixed px-6 pt-4 h-full text-sm bg-gray-150">
             <div className="w-full flex flex-col gap-y-3">
                 <div className="flex w-full justify-between items-center">
                     <div className="flex gap-x-2 items-center">
-                    <img src={require("./Icons/notifications.png")} />
-                    <img src={require("./Icons/bell.png")} />
+                    <button>
+                        <img src={require("./Icons/bell.png")} />
+                    </button>
+                    <button>
+                        <img src={require("./Icons/notifications.png")} />
+                    </button>
                     </div>
                     <img className="profilePicImg" src={require("./Profiles/Ayush.png")} />
                 </div>
@@ -22,13 +27,13 @@ const RecentUpdates = (props) =>{
                 ex Duis velit feugiat ut nibh ullamcorper in laoreet consequat. dignissim nulla Lorem ad esse
                 </p>
                 <p>ut lobortis hendrerit consequat, quis at dolore minim</p>
-                <a className="underline decoration-dotted text-xs text-blue-600">See all</a>
+                <button className="underline self-start decoration-dotted text-xs text-blue-600">See all</button>
                 <hr />
                 <h1 className="font-bold text-base">Post</h1>
                 <div className="bg-white rounded-md flex flex-col gap-y-6 px-4 py-5 mt-2">
                     <div className="flex gap-x-2 items-center">
                     <img src={require("./Profiles/Ayush.png")} />
-                    <h1 className="font-bold text-base">{props.name}</h1>
+                    <h1 className="font-bold text-base">{manager}</h1>
                     </div>
                     
                     <form>

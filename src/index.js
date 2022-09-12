@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./output.css";
+// import "./output.css";
+import "./index.css";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 
@@ -13,4 +14,3 @@ root.render(
   </BrowserRouter>,
 );
 
-// Pull data using Faker.js

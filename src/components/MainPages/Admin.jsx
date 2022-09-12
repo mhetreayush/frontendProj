@@ -130,7 +130,7 @@ const taskArray = adminTaskStatus.map((x) => {
 });
 function Admin() {
   return (
-    <div className="md:grid grid-cols-9 gap-3">
+    <div>
       <div className="flex flex-col gap-y-10 pt-7 col-span-6">
         <h1 className="text-2xl font-extrabold">
           Welcome back, <span className="text-blue-800">Jeffrey Richard</span>
@@ -166,10 +166,6 @@ function Admin() {
 
           <div className="flex flex-col gap-y-2 w-full mt-4">{taskArray}</div>
         </div>
-      </div>
-
-      <div className="hidden md:block md:col-span-3">
-        <RecentUpdates name="Manager 1" />
       </div>
     </div>
   );
