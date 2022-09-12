@@ -3,10 +3,12 @@ import SuperAdmin from "./MainPages/SuperAdmin";
 import Employee from "./MainPages/Employee";
 import Admin from "./MainPages/Admin";
 import ProjectsPage from "./ProjectPages/ProjectsPage";
+import SideBar from "./SideBar/SideBar";
 
 const AllRoutes = () => {
   return (
     <Routes>
+      <Route path="frontendProj/sidebar" element={<SideBar />} />
       <Route path="frontendProj/projects" element={<ProjectsPage />} />
       <Route path="frontendProj/superadmin" element={<SuperAdmin />} />
       <Route path="frontendProj/employee" element={<Admin />} />

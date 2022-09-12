@@ -29,7 +29,7 @@ const NavButton =() => {
         />
     ))
     return (
-        <ul className="flex gap-x-3 w-full justify-between">
+        <ul className="grid grid-cols-2 md:flex gap-x-3 w-full justify-between">
             {squareElements}
         </ul>
     )

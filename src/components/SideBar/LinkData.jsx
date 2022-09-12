@@ -1,31 +1,31 @@
-import CompletedProj from "../ProjectPages/completedProj";
-import OngoingProj from "../ProjectPages/ongoingProj";
-import ReqProj from "../ProjectPages/requestProj";
-import UpcomingProj from "../ProjectPages/upcomingProj";
+import Admin from "../MainPages/Admin";
+import Employee from "../MainPages/Employee";
+import SuperAdmin from "../MainPages/SuperAdmin";
+import AllPages from "../ProjectPages/ProjectsPage";
 
 export default [
         {
-            linkName:"Request",
-            id: "request",
+            linkName:"Home",
+            id: "home",
             on: true,
-            component: <ReqProj />
+            component: <Employee />,
         },   
         {
-            linkName:"Completed",
-            id: "completed",
+            linkName:"Projects",
+            id: "projects",
             on: false,
-            component: <CompletedProj />
+            component: <AllPages />,
         },
         {
-            linkName:"Ongoing",
-            id: "ongoing",
+            linkName:"Employee",
+            id: "employee",
             on: false,
-            component: <OngoingProj />
+            component: <Admin />,
         },   
         {
-            linkName:"Upcoming",
-            id: "upcoming",
+            linkName:"Superadmin",
+            id: "superadmin",
             on: false,
-            component: <UpcomingProj />
-        }  
+            component: <SuperAdmin />,
+        }
 ]

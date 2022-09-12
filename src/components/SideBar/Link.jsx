@@ -1,18 +1,18 @@
 import React from "react"
-export default function Link(props) {
+import { Link } from "react-router-dom"
+export default function ButtonLink(props) {
     const styles = {
-        baclgroundColor: props.on ? "#222222" : "blue"
+        backgroundColor: props.on ? "#93c5fd" : "#D1D5DB",
     }
-    
     return (
-        <button 
-            className="px-4 py-2 rounded-md"
+        <button
+            className="rounded-md"
             style={styles} 
             onClick={()=>{
                 return props.toggle(props.id, props.component)
                 }
             }
-        >{props.linkName}
+        ><img className="p-4 rounded-md" src={require(`../Icons/${props.id}.png`)}/>
         </button>
     )
 }

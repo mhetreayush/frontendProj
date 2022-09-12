@@ -12,7 +12,7 @@ const CompletedProj = () => {
       <div className="flex flex-col gap-y-5 w-full">
         <div className="bg-gray-150 my-3 py-4 px-6 flex flex-col gap-y-3 rounded-md">
           <div className="grid md:grid-cols-4 gap-4 relative">
-            <div className="flex gap-x-3 items-center">
+            <div className="flex mt-10 md:mt-0 gap-x-3 items-center">
               <img
                 className="profilePicImg"
                 src={require("../Profiles/Ayush.png")}
@@ -30,7 +30,7 @@ const CompletedProj = () => {
                 {faker.internet.email()}
               </h1>
             </div>
-            <div className="absolute top-[-3px] right-3 px-4 flex items-center h-fit py-2 bg-green-300 rounded-md justify-self-end self-center">
+            <div className="absolute top-[-3px] right-[5rem] md:right-3 px-4 flex items-center h-fit py-2 bg-green-300 rounded-md justify-self-end self-center">
               <h1 className="text-green-800 text-center">Completed</h1>
             </div>
           </div>
