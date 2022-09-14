@@ -1,4 +1,5 @@
 import {faker} from "@faker-js/faker"
+import AssignButton from "./AssignButton";
 const RecentUpdates = (props) =>{
     let manager = faker.name.lastName()
     return(
@@ -17,9 +18,7 @@ const RecentUpdates = (props) =>{
                 </div>
                 <h1 className="font-bold text-base">Recent Updates</h1>
                 <p>Service Request from <a href="#"><span className="text-blue-600">{faker.name.fullName()}</span></a> Assign now</p>
-                <button className="px-4 py-2 bg-violetCustom rounded-md text-white font-bold w-fit">
-                  Assign
-                </button>
+                <AssignButton />
                 <p>
                 esse magna dolore luptatum consequat, amet, vel nisl molestie hendrerit nulla laoreet et feugait aliquam
                 </p>

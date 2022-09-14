@@ -2,6 +2,8 @@ import CardsData from "../CardsData";
 import NavBar from "../Navbar";
 import RecentUpdates from "../recentUpdates";
 import { faker } from "@faker-js/faker";
+import Dropdown from "../DropDown";
+import AssignButton from "../AssignButton";
 const ReqProj = () => {
   let userRole = faker.company.bs();
   userRole = userRole[0][0].toUpperCase() + userRole.slice(1);
@@ -41,14 +43,13 @@ const ReqProj = () => {
           </div>
 
           <div className="flex w-full flex-col md:flex-row justify-between items-center pr-5">
-            <div className="flex gap-x-3">
-              <h1 className="font-bold">Select Employee</h1>
-              <h3>DropDown comes here</h3>
+            <div className="w-full flex items-center justify-start md:flex-row flex-col gap-y-1 gap-x-3">
+              <h1 className="font-bold">Select Employee:</h1>
+              {/* <h3>DropDown comes here</h3> */}
+              <Dropdown />
             </div>
             <div className="self-start mt-3 md:mt-0 md:self-end">
-              <button className="px-6 py-2 bg-violetCustom rounded-md text-white font-bold">
-                Assign
-              </button>
+              <AssignButton />
             </div>
           </div>
         </div>
